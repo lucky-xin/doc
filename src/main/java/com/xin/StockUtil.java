@@ -32,14 +32,13 @@ public class StockUtil {
         try {
             Map<String, Object> map = new Gson().fromJson(result, Map.class);
             datas = (List<List<Object>>) map.get("data");
+            for (List<Object> item : datas) {
+                item.add(stockCode);
+                stocks.add(new Stock.Builder(item).build());
+            }
         } catch (Exception e) {
-            return stocks;
         }
 
-        for (List<Object> item : datas) {
-            item.add(stockCode);
-            stocks.add(new Stock.Builder(item).build());
-        }
         return stocks;
     }
 
