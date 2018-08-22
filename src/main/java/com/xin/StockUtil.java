@@ -28,9 +28,6 @@ public class StockUtil {
         List<Stock> stocks = new ArrayList<>();
         String result = HttpUtil.get(url);
 
-        if (StringUtil.isEmpty(result)) {
-            return stocks;
-        }
         List<List<Object>> datas = new ArrayList<>();
         try {
             Map<String, Object> map = new Gson().fromJson(result, Map.class);
