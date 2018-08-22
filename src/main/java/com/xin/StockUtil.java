@@ -1,6 +1,7 @@
 package com.xin;
 
 import com.google.gson.Gson;
+import com.xin.utils.AssertUtil;
 import com.xin.utils.StringUtil;
 import com.xin.utils.http.HttpUtil;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,9 @@ public class StockUtil {
 
 
     public static List<Stock> getStocks(String stockCode, int year) {
+        AssertUtil.checkCondition(StringUtil.isInteger(stockCode), "股票代码必须为整数。");
+        AssertUtil.checkCondition(year > 1900, "输入的年份不对。");
+
         String url = "http://img1.money.126.net/data/hs/kline/day/history/" + year + "/1" + stockCode + ".json";
         List<Stock> stocks = new ArrayList<>();
         String result = HttpUtil.get(url);
@@ -27,15 +31,17 @@ public class StockUtil {
         if (StringUtil.isEmpty(result)) {
             return stocks;
         }
+        List<List<Object>> datas = new ArrayList<>();
+        try {
+            Map<String, Object> map = new Gson().fromJson(result, Map.class);
+            datas = (List<List<Object>>) map.get("data");
+        } catch (Exception e) {
+            return stocks;
+        }
 
-        Map<String, Object> map = new Gson().fromJson(result, Map.class);
-
-        List<List<Object>> datas = (List<List<Object>>) map.get("data");
-        Stock stock = null;
         for (List<Object> item : datas) {
-                item.add(stockCode);
-                stock = new Stock.Builder(item).build();
-                stocks.add(stock);
+            item.add(stockCode);
+            stocks.add(new Stock.Builder(item).build());
         }
         return stocks;
     }
