@@ -29,14 +29,11 @@ public class StockUtil {
         String result = HttpUtil.get(url);
 
         List<List<Object>> datas = new ArrayList<>();
-        try {
-            Map<String, Object> map = new Gson().fromJson(result, Map.class);
-            datas = (List<List<Object>>) map.get("data");
-            for (List<Object> item : datas) {
-                item.add(stockCode);
-                stocks.add(new Stock.Builder(item).build());
-            }
-        } catch (Exception e) {
+        Map<String, Object> map = new Gson().fromJson(result, Map.class);
+        datas = (List<List<Object>>) map.get("data");
+        for (List<Object> item : datas) {
+            item.add(stockCode);
+            stocks.add(new Stock.Builder(item).build());
         }
 
         return stocks;
