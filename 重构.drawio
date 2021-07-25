@@ -1,1 +1,63 @@
-<mxfile host="app.diagrams.net" modified="2021-07-25T12:28:36.571Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" version="14.8.0" etag="s7MJezsa1x3XhjEm3yX_" type="github"><diagram id="tMOxbGEtEHnBQ5ZtBLQh">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-07-25T12:42:13.359Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" etag="WS_otm9jssIaXu5IB8Tr" version="14.8.0" type="github">
+  <diagram id="tMOxbGEtEHnBQ5ZtBLQh" name="Page-1">
+    <mxGraphModel dx="1368" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-1" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" vertex="1" parent="1">
+          <mxGeometry x="150" y="280" width="190" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-2" value="pistonint-distributed-job" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-3" value="型号匹配，VIN码解析" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-7" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="BV0kLDYLrF3I5he7kPI8-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="340" as="sourcePoint" />
+            <mxPoint x="380" y="240" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-8" value="&lt;b&gt;pistonint-idata&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="370" width="110" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-9" value="" style="ellipse;whiteSpace=wrap;html=1;gradientColor=#97d077;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="270" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-11" value="批量估值/预测" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="587.5" y="290" width="72.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-12" value="" style="endArrow=classic;html=1;entryX=0.9;entryY=0.785;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BV0kLDYLrF3I5he7kPI8-11" target="BV0kLDYLrF3I5he7kPI8-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="320" as="sourcePoint" />
+            <mxPoint x="390" y="250" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-14" value="主要功能：&lt;br&gt;分布式定时任务，分布式批任务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="321" y="100" width="228" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-15" value="" style="ellipse;whiteSpace=wrap;html=1;gradientColor=#ffd966;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="335" y="390" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-10" value="&lt;b&gt;pistonint-scheduler&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="470" width="130" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-18" value="&lt;b&gt;pistonint-lab&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="360" width="110" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-19" value="定时任务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="405" y="420" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BV0kLDYLrF3I5he7kPI8-20" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="BV0kLDYLrF3I5he7kPI8-15" target="BV0kLDYLrF3I5he7kPI8-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="360" as="sourcePoint" />
+            <mxPoint x="480" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
